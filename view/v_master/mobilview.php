@@ -5,7 +5,7 @@
         <div class="col-sm-6"><h1 class="m-0">Data Mobil</h1></div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?= base_url('Mobil_C/index') ?>">Master Data</a></li>
+            <li class="breadcrumb-item"><a href="<?= base_url('?url=c_master/Mobil_C/index') ?>">Master Data</a></li>
             <li class="breadcrumb-item active">Data Mobil</li>
           </ol>
         </div>
@@ -19,7 +19,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-              <a href="<?= base_url('Mobil_C/create_mobil') ?>" class="btn btn-primary mb-3">
+              <a href="<?= base_url('?url=c_master/Mobil_C/create_mobil') ?>" class="btn btn-primary mb-3">
                 <i class="fas fa-car"></i> Tambah Data Mobil
               </a>
               <table class="table table-bordered table-striped">
@@ -60,12 +60,12 @@
                       <img src="<?= base_url('img/'.$m['ft_interior']) ?>" width="100" style="border-radius:5px;">
                     </td>
 
-                    <td><?= number_format($m['hrg_hari'], 0, ',', '.') ?></td>
+                    <td><?= $m['hrg_hari']?></td>
                     <td><?= $m['cttn_unit'] ?></td>
                     <td><?= $m['status_unit'] ?></td>
                     <td>
-                      <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                      <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                      <a href="<?= base_url('?url=c_master/Mobil_C/edit/' . $m['no_plat']) ?>" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="<?= base_url('?url=c_master/Mobil_C/hapus/' . $m['no_plat']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</a>
                     </td>
                   </tr>
                   <?php endforeach; ?>

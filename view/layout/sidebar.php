@@ -2,27 +2,25 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
     <!-- Logo AdminLTE -->
-    <a href="<?= base_url('Admin_C') ?>" class="brand-link">
+    <a href="<?= base_url('?url=Admin_C/index') ?>" class="brand-link">
         <img
             src="<?= base_url('AdminLTE-3.2.0/dist/img/AdminLTELogo.png') ?>"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3"
             style="opacity: .8">
-
         <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
-    <!-- Sidebar -->
     <div class="sidebar">
 
         <!-- User Panel -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 <img
                     src="<?= base_url('foto.png') ?>"
                     class="img-circle elevation-2"
                     alt="Foto Indra"
-                    style="width: 35px; height: 35px; object-fit: cover;">
+                    style="width:35px;height:35px;object-fit:cover;">
             </div>
 
             <div class="info">
@@ -40,24 +38,24 @@
                     aria-label="Search">
 
                 <div class="input-group-append">
-                    <button class="btn btn-sidebar" type="button">
+                    <button class="btn btn-sidebar">
                         <i class="fas fa-search fa-fw"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Menu -->
+        <!-- MENU SIDEBAR -->
         <nav class="mt-2">
-            <ul
-                class="nav nav-pills nav-sidebar flex-column"
+            <ul class="nav nav-pills nav-sidebar flex-column"
                 data-widget="treeview"
                 role="menu"
-                data-accordion="true">
+                data-accordion="false">
 
                 <!-- MASTER DATA -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link bg-primary">
+                <li class="nav-item has-treeview menu-open">
+
+                    <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Master Data
@@ -66,33 +64,41 @@
                     </a>
 
                     <ul class="nav nav-treeview">
+
+                        <!-- Data Mobil -->
                         <li class="nav-item">
-                            <a href="<?= base_url('Mobil_C/index') ?>" class="nav-link">
+                            <a href="<?= base_url('?url=c_master/Mobil_C/index') ?>"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Mobil</p>
                             </a>
                         </li>
 
+                        <!-- Data Penyewa -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('?url=c_master/Penyewa_C068/index') ?>"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Penyewa</p>
                             </a>
                         </li>
+
                     </ul>
                 </li>
 
                 <!-- TRANSAKSI -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link bg-primary">
-    <i class="nav-icon fas fa-exchange-alt"></i>
-    <p>
-        Transaksi
-        <i class="right fas fa-angle-left"></i>
-    </p>
-</a>
+                <li class="nav-item has-treeview menu-open">
+
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <p>
+                            Transaksi
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
 
                     <ul class="nav nav-treeview">
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
@@ -120,33 +126,40 @@
                                 <p>Data Denda</p>
                             </a>
                         </li>
+
                     </ul>
                 </li>
 
                 <!-- LAPORAN -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link bg-primary">
-    <i class="nav-icon fas fa-chart-bar"></i>
-    <p>
-        Laporan
-        <i class="right fas fa-angle-left"></i>
-    </p>
-</a>
+                <li class="nav-item has-treeview menu-open">
+
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-chart-bar"></i>
+                        <p>
+                            Laporan
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
 
                     <ul class="nav nav-treeview">
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Laporan Kembali</p>
                             </a>
                         </li>
+
                     </ul>
                 </li>
 
                 <!-- LOGOUT -->
                 <li class="nav-item">
-                    <a href="<?= base_url('Login_C/logout') ?>" class="nav-link">
+                    <a href="<?= base_url('?url=Login_C/keluar') ?>"
+                       class="nav-link">
+
                         <i class="nav-icon fas fa-sign-out-alt"></i>
+
                         <p>Logout</p>
                     </a>
                 </li>
